@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html style="font-size: 70.2604px;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-language" content="zh-CN">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<title>梅州字节悦动科技有限公司</title>
+	<link href="files/字节悦动.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="files/reset.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="files/media.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="files/style.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="files/iconfont.css" type="text/css" media="screen" charset="utf-8">
+	<script src="files/iconfont.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery-1.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="files/swiper.css" type="text/css" media="screen" charset="utf-8">
+	<script src="files/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery_003.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery_002.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/html5.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/bocfe.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/plug.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/share.js"></script>
+	<script src="files/share.js"></script>
+	<script src="files/pc_nb.js" charset="UTF-8"></script>
+	<link rel="stylesheet" type="text/css" href="files/main.css">
+	<script type="text/javascript"
+		data-bdms-faccdee21b68="eyJhcHBfa2V5IjoiNTQ4MCIsImFwcF92aWV3IjoicHJvbW90ZSIsImJyb3dzZXJfdXJsIjoiaHR0cHM6Ly9zb2ZpcmUuYmFpZHUuY29tL2RhdGEvdWEvYWIuanNvbiIsImZvcm1fZGVzYyI6IiIsInNlbmRfaW50ZXJ2YWwiOjUwLCJzZW5kX21ldGhvZCI6M30="
+		src="files/dfxaf.js"></script>
+	<link rel="stylesheet" href="files/share_style0_16.css">
+</head>
+
+<body class="wel-con avh0">
+	<div class="bocweb-header pcbox ">
+		<header class="header  fixed">
+			<div class="head w1725  f-cb">
+				<div class="bocweb-logo fl">
+					<a class="logo" href="#">
+						<img src="files/bocweb-logo.png" alt="">
+					</a>
+				</div>
+
+			</div>
+		</header>
+	</div>
+
+	<div class="contable"></div>
+	<!-- 视频 -->
+	<div class="video-content">
+		<div class="video-fixed">
+			<div class="videoboxs">
+				<div class="box">
+					<video id="video" playsinline="" controls="controls" autoplay="autoplay" preload="none" src=""
+						width="100%" height="100%"></video>
+				</div>
+				<div class="cha"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fixed-right" style="display: block;">
+		<div class="items items0 active  f-cb">
+			<div class="itemsbox">
+				<div class="item-left fl">
+					<div class="img"><img src="files/wx.png" alt=""></div>
+					<div class="span">微信</div>
+				</div>
+				<div class="item-right fl">
+					<img src="files/ewm.jpg" alt="">
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="items">
+			<div class="item-left ttop">
+				<div class="img"><img src="files/img3.png" alt=""></div>
+				<div class="span">TOP</div>
+			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+		.fixed-right {
+			z-index: 10;
+		}
+
+		.fixed-right .items0 .item-right,
+		.fixed-right .items1 .item-right img {
+			position: absolute;
+			left: 65px;
+			top: -30px;
+			width: 130px;
+			height: 130px;
+		}
+		}
+	</style>
+
+
+	<script>
+		$(function () {
+			$(".liuzi").on("click", function () {
+				htmlobj = $.ajax({
+					url: "http://www.speechocean.com/business/formtable1_ajax.html",
+					async: false,
+				}
+				);
+				$(".contable").html(htmlobj.responseText);
+			})
+			$(".sousuo").on("click", function () {
+				$(".headsearch-box").fadeIn();
+
+			})
+			$(".headsearch-box .x-box .x-o").on("click", function () {
+				$(".headsearch-box").fadeOut();
+
+			})
+
+
+			var h = $(window).height();
+			$(window).scroll(function () {
+				if ($(window).scrollTop() >= h / 2) {
+					$('.fixed-right').fadeIn();
+				}
+				if ($(window).scrollTop() < h / 2) {
+					$('.fixed-right').fadeOut();
+				}
+			})
+
+			$(document).scroll(function () {
+				var m_top = $(".m-header").offset().top;
+				var top = ($(window).scrollTop());
+				if (m_top >= top) {
+					$(".w-header").removeClass('fixed');
+				} else if (m_top <= 0) {
+					$(".w-header").addClass('fixed');
+				}
+
+
+			});
+
+
+			$(".bocweb-nav1 .tx-input").on("click", function (e) {
+				e.stopPropagation();
+				$(this).addClass("on");
+			})
+			$(document).on("click", function () {
+				$(".bocweb-nav1 .tx-input").removeClass("on");
+			})
+			$(".header .bocweb-nav .nav0").on("click", function () {
+				$(".header-down").addClass("active");
+			})
+			$(".bocweb-header .bocweb-nav .nav-top").on("mouseenter", function () {
+				$(this).siblings().stop().slideDown().parents(".nav-li").siblings().find(".nav-top").stop().siblings().stop().slideUp();
+			})
+			$(".bocweb-header .bocweb-nav .nav-li").on("mouseleave", function () {
+				$(this).find(".nav-top").stop().siblings(".nav-bot").stop().slideUp();
+			})
+		})
+	</script>
+	<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+	<script>
+		$(function () {
+			$(".bocweb-nav1 .iconfont .ut0").on("mouseenter", function () {
+				$(this).siblings(".ut1").fadeIn();
+			})
+			$(".bocweb-nav1 .icon-duoyuyan").on("mouseleave", function () {
+				$(this).find(".ut1").fadeOut();
+			})
+			$(".fixed-right .items .ttop").on("click", function () {
+				$("html,body").animate({ "scrollTop": "0px" }, "1000");
+			})
+			$(document).scroll(function () {
+				if ($("div").hasClass('top-fixed')) {
+					var top00 = $(".top-fixed").offset().top;
+					var top = ($(window).scrollTop());
+					if (top00 >= top) {
+						$(".speechocean0").removeClass('fixed');
+					} else if (top00 <= top) {
+						$(".speechocean0").addClass('fixed');
+					}
+				}
+
+			});
+
+
+			$(".m-header .nav-btn").on('click', function () {
+				var _this = $(this);
+				if (!$(this).hasClass('hover')) {
+					$(".search-bg").slideUp();
+					$(this).addClass('hover');
+					$(this).children('.line1').stop().transition({ rotate: 45 }, 300);
+					$(this).children('.line2').stop().fadeOut(300);
+					$(this).children('.line3').stop().transition({ rotate: -45 }, 300, function () {
+						_this.addClass('active');
+					});
+					$(this).parents(".w-header").siblings('.sub-menu').stop().fadeIn();
+					$(".m-header .list-cont").addClass('active');
+					$("body,html").addClass('ovh');
+				} else {
+					$(this).removeClass('hover');
+					$(this).removeClass('active');
+					$(this).children('.line1').stop().transition({ rotate: 0 }, 300);
+					$(this).children('.line2').stop().fadeIn(300);
+					$(this).children('.line3').stop().transition({ rotate: 0 }, 300);
+					$(this).parents(".w-header").siblings('.sub-menu').stop().fadeOut();
+					$(".m-header .list-cont").removeClass('active');
+					$("body,html").removeClass('ovh');
+				}
+			});
+			$(".m-header .sub-menu .sub-tit").on('click', function () {
+				$(".m-header .search-bg").slideUp();
+				if ($(this).siblings('.sec-list').is(':hidden')) {
+					$(this).addClass('on');
+					$(this).siblings('.sec-list').stop().slideDown();
+					$(this).parent().siblings('li').children('.sec-list').stop().slideUp().siblings('.tit').removeClass('on');
+				} else {
+					$(this).removeClass('on');
+					$(this).siblings('.sec-list').stop().slideUp();
+				}
+			});
+			$('.qxbox').slimScroll({
+				width: '100%',
+				height: '100%',
+				color: '#8a8a8a', //滚动条颜色
+				size: '1px',
+				position: 'right',
+			});
+		})
+	</script>
+
+
+
+
+	<div class="wel-banner swiper-banner">
+		<div class="banner section-words0">
+
+		</div>
+
+		<img src="files/ind.jpg" width="90%" height="90%">
+	</div>
+
+	<div class="wel-item wel-item0">
+		<div class="wel-tit ft42 secwen animate">数据应用</div>
+		<div class="item0-ul hbox himg"><a href="#" class="li secwen add1 animate">
+				<div class="img">
+					<img class="i0" src="files/i8.png" alt="">
+					<img class="i1" src="files/i9.png" alt="">
+				</div>
+				<div class="words">AI机器人</div>
+			</a><a href="#" class="li secwen add2 animate">
+				<div class="img">
+					<img class="i0" src="files/i10.png" alt="">
+					<img class="i1" src="files/i11.png" alt="">
+				</div>
+				<div class="words">语音ASR</div>
+			</a><a href="#" class="li secwen add3 animate">
+				<div class="img">
+					<img class="i0" src="files/i12.png" alt="">
+					<img class="i1" src="files/i13.png" alt="">
+				</div>
+				<div class="words">自动驾驶</div>
+			</a><a href="#" class="li secwen add4 animate">
+				<div class="img">
+					<img class="i0" src="files/i14.png" alt="">
+					<img class="i1" src="files/i15.png" alt="">
+				</div>
+				<div class="words">电商AI</div>
+			</a><a href="#" class="li secwen add5 animate">
+				<div class="img">
+					<img class="i0" src="files/i16.png" alt="">
+					<img class="i1" src="files/i17.png" alt="">
+				</div>
+				<div class="words">虚拟智能体</div>
+			</a></div>
+	</div>
+	<div class="wel-item wel-item1">
+		<div class="wel-tit ft42 secwen animate">数据解决方案</div>
+		<div class="item1-ul pre secwen animate">
+			<div class="swiper-container w1605 swiper-container-horizontal">
+				<div class="swiper-wrapper"
+					style="transform: translate3d(-1974px, 0px, 0px); transition-duration: 0ms;">
+					<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566073729793p3c1p.jpg" alt="语音采集">
+								</div>
+							</div>
+							<div class="words">
+								语音采集 </div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+						data-swiper-slide-index="2" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566162861555uwsz5.jpg" alt="2D拉框">
+								</div>
+							</div>
+							<div class="words">
+								2D拉框 </div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+						data-swiper-slide-index="4" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566074034130h902.jpg" alt="3D点云">
+								</div>
+							</div>
+							<div class="words">
+								语音转写 </div>
+						</a>
+					</div>
+					<!--开始-->
+					<div class="swiper-slide" data-swiper-slide-index="0" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566073884692axzh9.jpg" alt="图片处理">
+								</div>
+							</div>
+							<div class="words">图片处理</div>
+						</a>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="1" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566073729793p3c1p.jpg" alt="文本清洗">
+								</div>
+							</div>
+							<div class="words">文本清洗</div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566074034130h902.jpg" alt="3D点云">
+								</div>
+							</div>
+							<div class="words">语音采集转写</div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566162861555uwsz5.jpg" alt="2D拉框">
+								</div>
+							</div>
+							<div class="words">调查测绘</div>
+						</a>
+					</div>
+					<!--循环-->
+					<div class="swiper-slide" data-swiper-slide-index="0" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566073884692axzh9.jpg" alt="图片处理">
+								</div>
+							</div>
+							<div class="words">图片处理</div>
+						</a>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="1" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566073729793p3c1p.jpg" alt="文本清洗">
+								</div>
+							</div>
+							<div class="words">文本清洗</div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566074034130h902.jpg" alt="3D点云">
+								</div>
+							</div>
+							<div class="words">语音采集转写</div>
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 282px;">
+						<a href="#" class="items">
+							<div class="images">
+								<div class="img">
+									<img src="files/15566162861555uwsz5.jpg" alt="2D拉框">
+								</div>
+							</div>
+							<div class="words">调查测绘</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+	<div class="wel-item wel-item2">
+		<div class="w1605">
+			<div class="wel-tit">
+				<div class="cb ft42 secwen animate">我们的能力</div>
+				<div class="cr ft18 secwen add1 animate">
+					<p><span style="font-size:14px;font-family:'微软雅黑','sans-serif'">字节悦动自成立以来一直致力于为客户提供数据资源和数据服务</span>
+					</p>
+				</div>
+			</div>
+			<div class="item2-ul hbox f-cb">
+				<div class="li secwen  animate">
+					<div class="img">
+						<img src="files/15565217567624s3z83.png" alt="公司历史悠久">
+					</div>
+					<div class="t0 ft22">多样数据采集制作经验</div>
+					<div class="t1 ft16">
+						多样数据采集与数据制作经验、多因子文本清洗、语言模型AI训练、客家话、粤语和普通话asr/tts、2/3D的多帧标注、住建局房屋核查、公安局人口房屋调查等十余种项目经验
+					</div>
+				</div>
+				<div class="li secwen add1 animate">
+					<div class="img">
+						<img src="files/15565217388802dn7fm.png" alt="跨领域，多种类的数据服务">
+					</div>
+					<div class="t0 ft22">跨领域，多种类的数据服务</div>
+					<div class="t1 ft16">制作领域覆盖图片处理、文本清洗、语音采集转写、调查测绘等</div>
+				</div>
+				<div class="li secwen add2 animate">
+					<div class="img">
+						<img src="files/1556093489353wllir.png" alt="一站式数据服务解决方案">
+					</div>
+					<div class="t0 ft22">一站式数据服务解决方案</div>
+					<div class="t1 ft16">服务涵盖数据采集、清洗、标注和数据评估等</div>
+				</div>
+				<div class="li secwen add3 animate">
+					<div class="img">
+						<img src="files/15560935033396s8hed.png" alt="多语种制作能力，数据资源丰富">
+					</div>
+					<div class="t0 ft22">悦听（语音识别转写服务，开发中）</div>
+					<div class="t1 ft16"></div>
+				</div>
+				<div class="li secwen add3 animate">
+					<div class="img">
+						<img src="files/15560935202492aadz2.png" alt="遍及全球的语言学专家团队">
+					</div>
+
+					<div class="t0 ft22">顶级合作平台</div>
+					<div class="t1 ft16">海天瑞声一级供应商、百度一级供应商、字节跳动二级供应商，亦曾服务于多个市级政府部门</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wel-item wel-item3">
+		<div class="images secwen animate">
+			<div class="pcbox img"
+				style="background:url(http://www.speechocean.com/upload/2019/04/29/15565237126775s2lp1.jpg) no-repeat center;background-size: cover;">
+			</div>
+			<img src="files/15565238355051lbzl7.jpg" alt="与我们一同塑造未来AI" class="mbox">
+		</div>
+		<div class="words active00 swiper-banner himg">
+			<div class="w1520 item3-box banner">
+				<div class="wel-tit active">
+					<div class="cb ft42 secwen animate">与我们一同塑造未来AI</div>
+					<div class="cr ft18 secwen add1 animate">
+						<p>字节悦动的服务和数据，赢得了众多企业的信赖</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="bocweb-footer pcbox">
+		<div class="w1520 footer f-cb">
+			<div class="footer-top f-cb">
+				<div class="left-images fl">
+					<a href="#" class="logo">
+						<img src="files/bocweb-logo.png" alt="">
+					</a>
+				</div>
+				<div class="right-text fr">
+					<div class="li">
+						<div class="li-top ft18">联系我们</div>
+						<div class="li-bot">
+							<div>地址：广东省梅州市梅县区桃源小镇86号</div>
+							<div>微信：zhang_add_rich</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<footer class="bocweb-mfooter mbox">
+		<div class="mfooter">
+			<div class="left-images fl">
+				<a href="#" class="logo">
+					<img src="files/bocweb-logo.png" alt="">
+				</a>
+			</div>
+			<div class="mfooter-top">
+				<table>
+					<tr>
+						<td>
+							<div class="ul ul0">
+								<div class="tit ft18">联系我们</div>
+								<div class="p">
+									<p>地址：广东省梅州市梅县区桃源小镇86号</p>
+									<p>微信：zhang_add_rich</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="ul ul1">
+								<div class="tit ft18">关注我们</div>
+								<div class="imgul f-cb">
+									<div class="img fl">
+										<img src="files/ewm.jpg" alt="二维码">
+									</div>
+								</div>
+							</div>
+			</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+	</footer>
+
+	<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+	<script>
+		$(function () {
+			$(".select-footer").hover(function () {
+				$(this).find(".se-bot").stop().slideToggle();
+			})
+			// $(".select-footer .se-bot").hover(function(e){
+			// 	e.stopPropagation();
+			// })
+			$('.send-mail').on('click', function () {
+				document.location = "mailto:dpo@speechocean.com";
+			});
+		})
+	</script>
+	<script src="files/main.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function () {
+			$(document).scroll(function () {
+				var m_top = $(".m-header").offset().top;
+				var pc_top = $(".bocweb-header").offset().top;
+				var top = ($(window).scrollTop());
+				if (m_top >= top) {
+					$(".w-header").removeClass('fixed');
+				} else if (m_top <= 0) {
+					$(".w-header").addClass('fixed');
+				}
+				if (pc_top >= top) {
+					$(".bocweb-header .header").removeClass('fixed');
+				} else if (pc_top <= 0) {
+					$(".bocweb-header .header").addClass('fixed');
+				}
+			});
+			if ($(".banner .swiper-slide").length > 1) {
+				var banner = new Swiper('.banner .swiper-container', {
+					pagination: '.banner .swiper-pagination',
+					centeredSlides: true,
+					slidesPerView: 1,
+					spaceBetween: 0,
+					initialSlide: 0,
+					speed: 600,
+					autoplay: 5000,
+					loop: true,
+					// effect:"fade",
+					slideToClickedSlide: true,
+					autoplayDisableOnInteraction: false,
+					paginationClickable: true,
+					breakpoints: {
+						1024: {
+							slidesPerView: 1,
+							speed: 600,
+							effect: "slide",
+							autoplay: 3000,
+						}
+					},
+					onInit: function (swiper) {
+
+
+					},
+					onSlideChangeEnd: function (swiper) {
+						var _index = swiper.activeIndex;
+						$(" .wel-banner").find(".secwen").removeClass("animate");
+						$(" .wel-banner  .swiper-slide-active").find(".secwen").addClass("animate");
+					}
+				})
+			}
+			var item3 = new Swiper('.wel-item3 .swiper-container', {
+				pagination: '.wel-item3 .swiper-pagination',
+				prevButton: '.wel-item3 .swiper-button-prev',
+				nextButton: '.wel-item3 .swiper-button-next',
+				slidesPerView: 1,
+				spaceBetween: 0,
+				initialSlide: 0,
+				speed: 600,
+				loop: true,
+				autoplay: 5000,
+				slideToClickedSlide: true,
+				autoplayDisableOnInteraction: false,
+				paginationClickable: true,
+				breakpoints: {
+					1024: {
+						slidesPerView: 1,
+						speed: 600,
+						effect: "slide",
+						autoplay: 3000,
+					}
+				},
+				onInit: function (swiper) {
+				},
+				onSlideChangeEnd: function (swiper) {
+					var _index = swiper.activeIndex;
+				}
+			})
+			var item1 = new Swiper('.wel-item1 .swiper-container', {
+				pagination: '.wel-item1 .swiper-pagination',
+				prevButton: '.wel-item1 .swiper-button-prev',
+				nextButton: '.wel-item1 .swiper-button-next',
+				slidesPerView: 4,
+				spaceBetween: 0,
+				initialSlide: 0,
+				speed: 600,
+				loop: true,
+				autoplay: 5000,
+				slideToClickedSlide: true,
+				autoplayDisableOnInteraction: false,
+				paginationClickable: true,
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+						speed: 600,
+						effect: "slide",
+						autoplay: 3000,
+					},
+					1024: {
+						slidesPerView: 3,
+						speed: 600,
+						effect: "slide",
+						autoplay: 3000,
+					}
+				},
+				onInit: function (swiper) {
+				},
+				onSlideChangeEnd: function (swiper) {
+					var _index = swiper.activeIndex;
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
